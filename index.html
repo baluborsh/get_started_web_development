@@ -3,12 +3,20 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
       <link href="styles/style.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
       <title>Освоение HTML-форм</title>
    </head>
    <body>
       <h3 id="head3" name="head3">Потренируемся в создании HTML-форм</h3>
+      <form>
+        <p>Поиск на странице</p>
+        <p>
+        <input type="search" id="search" name="search">
+        <button type="submit">Найти</button>
+        </p>
+        <p id="note1">Примечание: поиск пока не работает, будет выполнен позже через JavaScript</p>
+      </form>
      <form action="/my-handing-form-page" method="post">
        <ul>
         <li>
@@ -100,7 +108,7 @@
         </li>
         <li>
             <label for="yes-ofcourse">Конечно, ДА!</label>
-            <input type="radio" id="kenny-yes-ofcourse" name="kenny" value="yes-ofcourse">
+            <input type="radio" id="kenny-yes-ofcourse" name="kenny" value="yes-ofcourse" checked>
           </li>
       </ul>
       <input type="image" alt="Kenny's butt" title="DON'T KILL KENNY" src="images/Kenny01.jpg">
@@ -124,6 +132,68 @@
           <button type="reset">Сброс</button>
       </p>
     </fieldset>
+  </form>
+  <form>
+    <h4>Опробование различных полей ввода</h4>
+    <p>1. Поле ввода номера телефона:</p>
+    <p><input type="tel" id="tel" name="tel"</p>
+    <p>2. Поле ввода URL:</p>
+    <p><input type="url" id="url" name="url"></p>
+    <p>3. Поля ввода чисел:</p>
+    <p><input type="number" name="age" id="age" min="1" max="100" step="2"> - целые  числа с шагом 2 (типа возраст)</p>
+    <p><input type="number" name="change" id="pennies" min="0" max="1" step="0.01"> - дробные числа с шагом 0,01 (типа мелочь)</p>
+    <p>
+      <button type="submit">Отправить это говно на сервер (DDoS)</button>
+      <button type="reset">Сброс</button>
+    </p>
+  </form>
+  <form>
+    <h4>Опробование поля ввода типа "ползунок"</h4>
+    <label>Тереби ползунок:</label>
+    <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="100000">
+    <p>Результат теребления:<b><output class="price-output" for="price"></output></b></p>
+    <p>
+      <button type="submit">Отправить это говно на сервер (DDoS)</button>
+      <button type="reset">Сброс</button>
+    </p>
+  </form>
+  <form>
+    <h4>Выбор даты, времени и т.д.</h4>
+    <p>
+      Виджет отображения и выбора даты и времени без инфо о часовом поясе:
+      <input type="datetime-local" name="datetime" id="datetime">
+    </p>
+    <p>
+      Виджет выбора и отображения месяца и года:
+      <input type="month" name="month" id="month">
+    </p>
+    <p>
+      Виджет выбора и отображения времени:
+      <input type="time" name="time" id="time">
+    </p>
+    <p>
+      Виджет выбора и отображения номера недели и года:
+      <input type="week" name="week" id="week">
+    </p>
+    <p>
+      Виджет выбора даты с ограничением:
+       <p>
+         <label for="myDate">Выбирай дату (только летнюю):</label>
+         <input type="date" name="myDate" min="2020-06-01" max="2020-08-31" step="3600" id="myDate">
+       </p>
+    </p>
+    <p>
+        <button type="submit">Отправить это говно на сервер (DDoS)</button>
+        <button type="reset">Сброс</button>
+    </p>
+  </form>
+  <form>
+    <h4>Опробование выбора цвета</h4>
+    <p><input type="color" name="color" id="color"></p>
+    <p>
+        <button type="submit">Отправить это говно на сервер (DDoS)</button>
+        <button type="reset">Сброс</button>
+    </p>
   </form>
   <script src="scripts/main.js"></script>
   </body>
